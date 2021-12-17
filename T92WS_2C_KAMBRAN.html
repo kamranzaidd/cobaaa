@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>KETUPAT</title>
+</head>
+<body>
+<script>
+	var symbl = prompt('Masukkan symbol (*/+/#) : ');
+	var bntk = prompt('Masukkan bentuk :\n1. Persegi\n2. P. P\n3. Segitiga sama kaki\n4. Segitiga siku - siku rata kanan\n5. segitiga siku - siku rata kiri\n6. Ketupat',0);
+	var bil = prompt('Masukkan jumlah baris :',0);
+	var bil2 = prompt('Masukkan jumlah kolom :',0);
+	bil = parseInt(bil);
+	bil2 = parseInt(bil2);
+	if (bntk=="1")
+	{
+		for (i=1;i<=bil;i++)
+		{
+			for (j=1;j<=bil2;j++)
+			{
+				document.write(symbl)
+				document.write(" ");
+			}
+			document.write("<br>");
+		}
+            
+	}
+	else if(bntk=="2")
+	{
+		for (i=1;i<=bil;i++)
+		{
+			for (j=1;j<=4*bil;j++)
+			{
+				document.write(symbl)
+				document.write(" ");
+			}
+			document.write("<br>");
+		}
+        
+
+	}
+	else if(bntk=="3")
+	{
+		for (i=1;i<=5;i++)
+		{
+        for (j=i;j<=5;j++)
+        {
+            document.write("_");
+        }
+        for (k=1;k<=i;k++){
+            document.write(symbl);
+        }
+        for (l=1;l<=i-1;l++){
+            document.write(symbl);
+        }
+        document.write("<br>");
+    	}
+	}
+	else if(bntk=="4")
+	{
+		for (i=1;i<=bil;i++)
+		{
+        for (j=bil;j>=i;j--)
+        {
+            document.write("_");
+        }
+        for (k=1;k<=i;k++){
+            document.write(symbl);
+        }
+        document.write("<br>");
+    	}
+	}
+	else if(bntk=="5")
+	{
+		for (i=1;i<=bil;i++)
+		{
+        for (j=1;j<=i;j++)
+        {
+            document.write(symbl);
+        }
+        document.write("<br>");
+    }
+	}
+	else if(bntk=="6")
+	{
+		for(i=bil;i>0;i--)
+		{
+			for(j=1;j<=i-1;j++)
+				{
+					document.write('&nbsp&nbsp');
+				}
+			for(y=1;y<=bil-i+1;y++)
+				{
+					document.write(symbl);
+				}
+
+			for(l=1;l<=bil-i;l++)
+				{
+					document.write(symbl);
+				}
+			document.write('<br>');
+			}
+				for(i=1;i<=bil;i++)
+			{
+				for(j=1;j<=i;j++){
+				document.write('&nbsp&nbsp');
+			}
+
+
+		for(y=1;y<=bil-i;y++){
+		document.write(symbl);
+
+		}
+
+
+		for(l=1;l<bil-i;l++){
+		document.write(symbl);
+		}
+		document.write('<br>');
+		}
+	}
+</script>
+</body>
+</html>
